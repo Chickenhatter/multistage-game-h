@@ -1,0 +1,107 @@
+[gd_scene format=4 uid="uid://brkj5olfm74tv"]
+
+[ext_resource type="Texture2D" uid="uid://0dif4phctgek" path="res://images/Tileset/Tiles.png" id="1_k4voq"]
+[ext_resource type="Texture2D" uid="uid://po7xvpl5oeeh" path="res://icon.svg" id="2_ah3ca"]
+[ext_resource type="Script" uid="uid://xm05l5kuno11" path="res://code/player_movements.gd" id="2_e2cj4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ah3ca"]
+texture = ExtResource("1_k4voq")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_e2cj4"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ah3ca")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2cj4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ah3ca")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1bno"]
+size = Vector2(17, 16)
+
+[node name="Level one" type="Node2D" unique_id=676487500]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=2045034251]
+
+[node name="Node2D" type="Node2D" parent="Node2D" unique_id=14145330]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Node2D/Node2D" unique_id=143051413]
+tile_map_data = PackedByteArray("AAAAAAMAAAADAAMAAAAGAAMAAAAFAAMAAAABAAMAAAAEAAIAAAACAAMAAAAEAAIAAAAFAAMAAAAEAAIAAAAEAAMAAAAEAAIAAAADAAMAAAACAAQAAAADAAQAAAAAAAQAAAADAAUAAAAAAAQAAAADAAYAAAAAAAQAAAA=")
+tile_set = SubResource("TileSet_e2cj4")
+
+[node name="Node2D2" type="Node2D" parent="Node2D" unique_id=333691026]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D2" unique_id=2144961978]
+position = Vector2(10, 38)
+script = ExtResource("2_e2cj4")
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=1092566484]
+zoom = Vector2(5, 5)
+position_smoothing_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=876951827]
+position = Vector2(-0.24999988, -9.23872e-07)
+scale = Vector2(0.12890625, 0.12500001)
+sprite_frames = SubResource("SpriteFrames_e2cj4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=2047084807]
+shape = SubResource("RectangleShape2D_u1bno")
