@@ -18,6 +18,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kfkw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwe3t"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gavp6"]
 texture = ExtResource("2_jwws0")
 0:0/0 = 0
@@ -66,6 +70,7 @@ sources/0 = SubResource("TileSetAtlasSource_gavp6")
 script = ExtResource("1_abedc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Character/CharacterBody2D" unique_id=788460445]
+scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_jwws0")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Character/CharacterBody2D" unique_id=1839436370]
@@ -74,6 +79,18 @@ zoom = Vector2(4, 4)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Character" unique_id=1666641932]
 scale = Vector2(0.1328125, 0.1328125)
 sprite_frames = SubResource("SpriteFrames_abedc")
+
+[node name="hwd" type="Area2D" parent="Node2D/Character" unique_id=449119892]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Character/hwd" unique_id=1799579125]
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_kfkw3")
+
+[node name="furthgether" type="Area2D" parent="Node2D/Character/hwd" unique_id=1887601714]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Character/hwd/furthgether" unique_id=803296756]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_bwe3t")
 
 [node name="Tileset" type="Node2D" parent="Node2D" unique_id=1615633408]
 
@@ -90,7 +107,13 @@ script = ExtResource("4_kfkw3")
 [node name="one" type="Area2D" parent="Node2D/Areas/one" unique_id=534035707]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/one/one" unique_id=1050597703]
+position = Vector2(88, 0)
+scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
 
+[connection signal="body_entered" from="Node2D/Character/hwd" to="Node2D/Character/CharacterBody2D" method="_on_hwd_body_entered"]
+[connection signal="body_exited" from="Node2D/Character/hwd" to="Node2D/Character/CharacterBody2D" method="_on_hwd_body_exited"]
+[connection signal="body_entered" from="Node2D/Character/hwd/furthgether" to="Node2D/Character/CharacterBody2D" method="_on_furthgether_body_entered"]
+[connection signal="body_exited" from="Node2D/Character/hwd/furthgether" to="Node2D/Character/CharacterBody2D" method="_on_furthgether_body_exited"]
 [connection signal="body_entered" from="Node2D/Areas/one/one" to="Node2D/Areas" method="_on_one_body_entered"]
 [connection signal="body_exited" from="Node2D/Areas/one/one" to="Node2D/Areas" method="_on_one_body_exited"]

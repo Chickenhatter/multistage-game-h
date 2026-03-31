@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_one_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		completion.boxx = 100
+		completion.boxx = 88
 
 func _on_one_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
