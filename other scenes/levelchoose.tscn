@@ -1,3 +1,78 @@
 [gd_scene format=3 uid="uid://dqrbr6e3wsot4"]
 
+[ext_resource type="Script" uid="uid://dmuj2nbpyc5vm" path="res://other scenes/invis_choose.gd" id="1_abedc"]
+[ext_resource type="Texture2D" uid="uid://po7xvpl5oeeh" path="res://icon.svg" id="2_gavp6"]
+[ext_resource type="Texture2D" uid="uid://0dif4phctgek" path="res://images/Tileset/Tiles.png" id="2_jwws0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwws0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_abedc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gavp6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gavp6"]
+texture = ExtResource("2_jwws0")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kfkw3"]
+sources/0 = SubResource("TileSetAtlasSource_gavp6")
+
 [node name="Node2D" type="Node2D" unique_id=532354569]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=333531504]
+
+[node name="Character" type="Node2D" parent="Node2D" unique_id=1058455364]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Character" unique_id=849418751]
+script = ExtResource("1_abedc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Character/CharacterBody2D" unique_id=788460445]
+shape = SubResource("RectangleShape2D_jwws0")
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/Character/CharacterBody2D" unique_id=1839436370]
+zoom = Vector2(4, 4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Character" unique_id=1666641932]
+scale = Vector2(0.1328125, 0.1328125)
+sprite_frames = SubResource("SpriteFrames_abedc")
+
+[node name="Node2D" type="Node2D" parent="Node2D" unique_id=1615633408]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Node2D/Node2D" unique_id=889799644]
+tile_set = SubResource("TileSet_kfkw3")

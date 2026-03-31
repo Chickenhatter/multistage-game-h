@@ -11,6 +11,7 @@ func _process(delta: float) -> void:
 	if unsee == true:
 		$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a += 0.1
 	if pathfin == true:
+		$"../Node2D2/CharacterBody2D/Path2D/PathFollow2D"
 
 func _on_death_plane_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
