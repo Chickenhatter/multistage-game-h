@@ -9,9 +9,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if unsee == true:
-		$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a += 0.1
+		$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a += 0.06
 	if pathfin == true:
 		$"../Node2D2/CharacterBody2D/Path2D/PathFollow2D"
+	
 
 func _on_death_plane_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
@@ -23,3 +24,8 @@ func _on_finish_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		unsee = true
 		pathfin = true
+
+
+func _on_trudeth_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		get_tree().change_scene_to_file('res://other scenes/levelchoose.tscn')

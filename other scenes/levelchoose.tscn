@@ -1,12 +1,24 @@
 [gd_scene format=4 uid="uid://dqrbr6e3wsot4"]
 
 [ext_resource type="Script" uid="uid://dmuj2nbpyc5vm" path="res://other scenes/invis_choose.gd" id="1_abedc"]
+[ext_resource type="Texture2D" uid="uid://c832vcxltrsox" path="res://images/Character/black.png" id="2_1jxpf"]
 [ext_resource type="Texture2D" uid="uid://po7xvpl5oeeh" path="res://icon.svg" id="2_gavp6"]
 [ext_resource type="Texture2D" uid="uid://0dif4phctgek" path="res://images/Tileset/Tiles.png" id="2_jwws0"]
 [ext_resource type="Script" uid="uid://b4enth7lfq6x0" path="res://code/areas_main.gd" id="4_kfkw3"]
 [ext_resource type="Texture2D" uid="uid://cyjyh3hvb57rf" path="res://images/Contol/Sin graph.png" id="5_bwe3t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwws0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ewnan"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1jxpf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_abedc"]
 animations = [{
@@ -76,6 +88,12 @@ shape = SubResource("RectangleShape2D_jwws0")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Character/CharacterBody2D" unique_id=1839436370]
 zoom = Vector2(4, 4)
+
+[node name="Unsee" type="AnimatedSprite2D" parent="Node2D/Character/CharacterBody2D" unique_id=1721461460]
+z_index = 100
+position = Vector2(0.5, -1)
+scale = Vector2(6.55, 6.28)
+sprite_frames = SubResource("SpriteFrames_ewnan")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Character" unique_id=1666641932]
 scale = Vector2(0.1328125, 0.1328125)
