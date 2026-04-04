@@ -1,8 +1,6 @@
-extends Node
-var level = 1
-var cap = 88
-var boxx = -100
-var anim = -100
+extends Node2D
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,3 +9,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_button_pressed() -> void:
+	await get_tree().create_timer(3.0).timeout
+	get_tree().change_scene_to_file('res://other scenes/levelchoose.tscn')
