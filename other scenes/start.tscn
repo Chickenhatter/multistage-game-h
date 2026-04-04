@@ -22,6 +22,7 @@ offset_right = 56.0
 offset_bottom = 33.0
 
 [node name="Blanker" type="Sprite2D" parent="Node2D" unique_id=1598468500]
+self_modulate = Color(1, 1, 1, 0)
 position = Vector2(12, 2.499998)
 scale = Vector2(3.36, 2.21)
 texture = ExtResource("2_xwybn")

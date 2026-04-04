@@ -3,13 +3,15 @@ var unsee = false
 var pathfin = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a = 0
+	completion.boxnum = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if unsee == false:
+		$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a -= 0.06
 	if unsee == true:
-		$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a += 0.06
+		$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a += 1
 	if pathfin == true:
 		$"../Node2D2/CharacterBody2D/Path2D/PathFollow2D"
 	

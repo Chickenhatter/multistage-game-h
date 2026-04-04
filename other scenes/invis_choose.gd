@@ -46,7 +46,8 @@ func _physics_process(delta: float) -> void:
 					$"../AnimatedSprite2D".position.x += 3
 					mov = true
 	if next == true:
-		$"Unsee".self_modulate.a += 0.09
+		$"Unsee".self_modulate.a += 0.11
+		completion.nextcall = 1
 		$"../AnimatedSprite2D".position.y -= 3
 
 

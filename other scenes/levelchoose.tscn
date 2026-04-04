@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0dif4phctgek" path="res://images/Tileset/Tiles.png" id="2_jwws0"]
 [ext_resource type="Script" uid="uid://b4enth7lfq6x0" path="res://code/areas_main.gd" id="4_kfkw3"]
 [ext_resource type="Texture2D" uid="uid://cyjyh3hvb57rf" path="res://images/Contol/Sin graph.png" id="5_bwe3t"]
+[ext_resource type="Script" uid="uid://mw12tej3k4jx" path="res://code/level_decider.gd" id="6_ewnan"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwws0"]
 
@@ -90,7 +91,6 @@ shape = SubResource("RectangleShape2D_jwws0")
 zoom = Vector2(4, 4)
 
 [node name="Unsee" type="AnimatedSprite2D" parent="Node2D/Character/CharacterBody2D" unique_id=1721461460]
-visible = false
 z_index = 100
 position = Vector2(0.5, -1)
 scale = Vector2(6.55, 6.28)
@@ -177,6 +177,9 @@ position = Vector2(128, 0)
 position = Vector2(328, 0)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
+
+[node name="next" type="Node2D" parent="Node2D" unique_id=1891202084]
+script = ExtResource("6_ewnan")
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=212000558]
 
