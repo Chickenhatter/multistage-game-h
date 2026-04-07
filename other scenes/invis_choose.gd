@@ -9,19 +9,23 @@ var next = false
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+func _ready() -> void:
+	$".".position.x = completion.boxx
 
 func _physics_process(delta: float) -> void:
+	print(completion.boxx)
 	$"Unsee".self_modulate.a -= 0.03
 	var motion = Vector2.ZERO
 	v = $"../AnimatedSprite2D".position.x
 	m = $".".position.x
 	if Input.is_action_just_pressed("ui_accept"):
 		if inside == true:
+			completion.warn = 1
 			next = true
 	if m > 4:
 		if Input.is_action_pressed('ui_a'):
 			motion.x -= 1
-	if m < 500:
+	if m < completion.cap:
 		if Input.is_action_pressed('ui_d'):
 			motion.x += 1
 	velocity = motion * SPEED

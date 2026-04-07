@@ -18,8 +18,9 @@ func _on_one_body_entered(body: Node2D) -> void:
 
 func _on_one_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		completion.boxx = -100
-		completion.boxnum = 0
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0
 
 
 func _on_two_body_entered(body: Node2D) -> void:
@@ -30,8 +31,9 @@ func _on_two_body_entered(body: Node2D) -> void:
 
 func _on_two_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		completion.boxx = -100
-		completion.boxnum = 0
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0
 
 
 func _on_three_body_entered(body: Node2D) -> void:
@@ -42,8 +44,9 @@ func _on_three_body_entered(body: Node2D) -> void:
 
 func _on_three_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		completion.boxx = -100
-		completion.boxnum = 0
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0
 
 
 func _on_four_body_entered(body: Node2D) -> void:
@@ -54,5 +57,6 @@ func _on_four_body_entered(body: Node2D) -> void:
 
 func _on_four_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		completion.boxx = -100
-		completion.boxnum = 0
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0

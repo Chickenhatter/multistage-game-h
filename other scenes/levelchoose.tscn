@@ -73,6 +73,7 @@ texture = ExtResource("2_jwws0")
 sources/0 = SubResource("TileSetAtlasSource_gavp6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gavp6"]
+size = Vector2(20, 398.08334)
 
 [node name="Node2D" type="Node2D" unique_id=532354569]
 
@@ -127,7 +128,7 @@ script = ExtResource("4_kfkw3")
 [node name="one" type="Area2D" parent="Node2D/Areas/one" unique_id=534035707]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/one/one" unique_id=1050597703]
-position = Vector2(88, 0)
+position = Vector2(88, -228.75)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
 
@@ -136,7 +137,7 @@ shape = SubResource("RectangleShape2D_gavp6")
 [node name="two" type="Area2D" parent="Node2D/Areas/two" unique_id=1322968792]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/two/two" unique_id=1040464069]
-position = Vector2(168, 0)
+position = Vector2(168, -177.87502)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
 
@@ -154,7 +155,7 @@ shape = SubResource("RectangleShape2D_gavp6")
 [node name="four" type="Area2D" parent="Node2D/Areas/four" unique_id=1013474392]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/four/four" unique_id=1232495734]
-position = Vector2(328, 0)
+position = Vector2(328, -160.5)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
 
