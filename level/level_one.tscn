@@ -5,6 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://po7xvpl5oeeh" path="res://icon.svg" id="2_ah3ca"]
 [ext_resource type="Script" uid="uid://xm05l5kuno11" path="res://code/player_movements.gd" id="2_e2cj4"]
 [ext_resource type="Texture2D" uid="uid://c832vcxltrsox" path="res://images/Character/black.png" id="5_jq8xc"]
+[ext_resource type="Texture2D" uid="uid://c2xnmlvstsxw8" path="res://images/Character/pixil-frame-0 (16).png" id="6_vj0se"]
+[ext_resource type="Texture2D" uid="uid://cbvfnjt1p4ojg" path="res://images/Character/pixil-frame-0 (17).png" id="7_6jd0m"]
+[ext_resource type="Texture2D" uid="uid://cau88axhoapal" path="res://images/Character/pixil-frame-0 (12).png" id="8_1owxw"]
+[ext_resource type="Texture2D" uid="uid://y3k5ns5lg5qr" path="res://images/Character/pixil-frame-0 (15).png" id="9_weswd"]
+[ext_resource type="Texture2D" uid="uid://iljfjsyqsfp" path="res://images/Character/pixil-frame-0 (9).png" id="10_ylxut"]
+[ext_resource type="Texture2D" uid="uid://dptvfo5imu1tt" path="res://images/Character/pixil-frame-0 (10).png" id="11_4frlm"]
+[ext_resource type="Texture2D" uid="uid://cakd13bq76xxt" path="res://images/Character/pixil-frame-0 (13).png" id="12_vjef4"]
+[ext_resource type="Texture2D" uid="uid://tfykl73beope" path="res://images/Character/pixil-frame-0 (14).png" id="13_h3vvp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ah3ca"]
 texture = ExtResource("1_k4voq")
@@ -107,7 +115,14 @@ texture = ExtResource("1_k4voq")
 [sub_resource type="TileSet" id="TileSet_a1wd8"]
 sources/0 = SubResource("TileSetAtlasSource_jq8xc")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_e2cj4"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1bno"]
+size = Vector2(17, 16)
+
+[sub_resource type="Curve2D" id="Curve2D_u1bno"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxc86"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpyml"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -116,10 +131,51 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_vj0se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6jd0m")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1owxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_weswd")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ylxut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4frlm")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_vjef4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_h3vvp")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1bno"]
-size = Vector2(17, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a1wd8"]
 animations = [{
@@ -139,10 +195,6 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
-
-[sub_resource type="Curve2D" id="Curve2D_u1bno"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxc86"]
 
 [node name="Level one" type="Node2D" unique_id=676487500]
 
@@ -187,20 +239,8 @@ script = ExtResource("2_e2cj4")
 zoom = Vector2(5, 5)
 position_smoothing_enabled = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=876951827]
-position = Vector2(-0.24999988, -9.23872e-07)
-scale = Vector2(0.12890625, 0.12500001)
-sprite_frames = SubResource("SpriteFrames_e2cj4")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=2047084807]
 shape = SubResource("RectangleShape2D_u1bno")
-
-[node name="Unsee" type="AnimatedSprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=1074815101]
-position = Vector2(22, -18)
-scale = Vector2(12.365002, 10.92)
-sprite_frames = SubResource("SpriteFrames_a1wd8")
-animation = &"Unsee"
-autoplay = "Unsee"
 
 [node name="Path2D" type="Path2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=1379500561]
 curve = SubResource("Curve2D_u1bno")
@@ -211,6 +251,27 @@ curve = SubResource("Curve2D_u1bno")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D2/CharacterBody2D/Path2D/PathFollow2D/Leave" unique_id=196922438]
 shape = SubResource("RectangleShape2D_bxc86")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=294144933]
+position = Vector2(-1, 2)
+scale = Vector2(1.11, 1)
+sprite_frames = SubResource("SpriteFrames_vpyml")
+animation = &"left"
+autoplay = "left"
+offset = Vector2(43, 40)
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=1454018888]
+visible = false
+position = Vector2(0, -9.536743e-07)
+scale = Vector2(0.140625, 0.12500001)
+texture = ExtResource("2_ah3ca")
+
+[node name="Unsee" type="AnimatedSprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=1074815101]
+position = Vector2(22, -18)
+scale = Vector2(12.365002, 10.92)
+sprite_frames = SubResource("SpriteFrames_a1wd8")
+animation = &"Unsee"
+autoplay = "Unsee"
 
 [connection signal="body_entered" from="Node2D/Map/Death Plane" to="Node2D/Map" method="_on_death_plane_body_entered"]
 [connection signal="body_entered" from="Node2D/Map/Finish" to="Node2D/Map" method="_on_finish_body_entered"]

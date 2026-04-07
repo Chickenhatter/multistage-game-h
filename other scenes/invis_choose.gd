@@ -50,9 +50,16 @@ func _physics_process(delta: float) -> void:
 					$"../AnimatedSprite2D".position.x += 3
 					mov = true
 	if next == true:
+		$"../AnimatedSprite2D".play('up')
 		$"Unsee".self_modulate.a += 0.11
 		completion.nextcall = 1
 		$"../AnimatedSprite2D".position.y -= 3
+	elif Input.is_action_pressed('ui_a'):
+		$"../AnimatedSprite2D".play('left')
+	elif Input.is_action_pressed('ui_d'):
+		$"../AnimatedSprite2D".play('right')
+	else:
+		$"../AnimatedSprite2D".play('standing')
 
 
 func _on_hwd_body_entered(body: Node2D) -> void:

@@ -10,15 +10,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	print(completion.boxx)
 	if unsee == false:
-		$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a -= 0.06
+		if $"../Node2D2/CharacterBody2D/Unsee".self_modulate.a > 0:
+			$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a -= 0.06
 	if unsee == true:
-		$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a += 0.26
+		$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a += 0.16
 	
 
 func _on_death_plane_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		unsee = true
-		pathfin = true
 
 
 func _on_finish_body_entered(body: Node2D) -> void:

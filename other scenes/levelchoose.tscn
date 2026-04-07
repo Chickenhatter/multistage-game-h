@@ -5,8 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://po7xvpl5oeeh" path="res://icon.svg" id="2_gavp6"]
 [ext_resource type="Texture2D" uid="uid://0dif4phctgek" path="res://images/Tileset/Tiles.png" id="2_jwws0"]
 [ext_resource type="Script" uid="uid://b4enth7lfq6x0" path="res://code/areas_main.gd" id="4_kfkw3"]
+[ext_resource type="Texture2D" uid="uid://cakd13bq76xxt" path="res://images/Character/pixil-frame-0 (13).png" id="4_mnoxg"]
+[ext_resource type="Texture2D" uid="uid://c2xnmlvstsxw8" path="res://images/Character/pixil-frame-0 (16).png" id="4_rdo6x"]
 [ext_resource type="Texture2D" uid="uid://cyjyh3hvb57rf" path="res://images/Contol/Sin graph.png" id="5_bwe3t"]
+[ext_resource type="Texture2D" uid="uid://cbvfnjt1p4ojg" path="res://images/Character/pixil-frame-0 (17).png" id="5_cp276"]
+[ext_resource type="Texture2D" uid="uid://tfykl73beope" path="res://images/Character/pixil-frame-0 (14).png" id="5_i88xr"]
 [ext_resource type="Script" uid="uid://mw12tej3k4jx" path="res://code/level_decider.gd" id="6_ewnan"]
+[ext_resource type="Texture2D" uid="uid://cau88axhoapal" path="res://images/Character/pixil-frame-0 (12).png" id="6_qwmji"]
+[ext_resource type="Texture2D" uid="uid://iljfjsyqsfp" path="res://images/Character/pixil-frame-0 (9).png" id="6_rdo6x"]
+[ext_resource type="Texture2D" uid="uid://dptvfo5imu1tt" path="res://images/Character/pixil-frame-0 (10).png" id="7_cp276"]
+[ext_resource type="Texture2D" uid="uid://y3k5ns5lg5qr" path="res://images/Character/pixil-frame-0 (15).png" id="7_s6gn7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwws0"]
 
@@ -29,6 +37,50 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rdo6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cp276")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_qwmji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s6gn7")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_rdo6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cp276")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mnoxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i88xr")
+}],
+"loop": true,
+"name": &"up",
 "speed": 5.0
 }]
 
@@ -98,8 +150,12 @@ scale = Vector2(6.55, 6.28)
 sprite_frames = SubResource("SpriteFrames_ewnan")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Character" unique_id=1666641932]
-scale = Vector2(0.1328125, 0.1328125)
+position = Vector2(47, 41)
+scale = Vector2(1.11, 1)
 sprite_frames = SubResource("SpriteFrames_abedc")
+animation = &"left"
+autoplay = "left"
+offset = Vector2(43, 40)
 
 [node name="hwd" type="Area2D" parent="Node2D/Character" unique_id=449119892]
 

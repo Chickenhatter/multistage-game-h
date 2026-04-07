@@ -15,4 +15,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if not is_on_floor():
+		$AnimatedSprite2D.play('up')
+	elif Input.is_action_pressed('ui_a'):
+		$AnimatedSprite2D.play('left')
+	elif Input.is_action_pressed('ui_d'):
+		$AnimatedSprite2D.play('right')
+	else:
+		$AnimatedSprite2D.play('standing')
 	move_and_slide()
