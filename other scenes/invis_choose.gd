@@ -2,6 +2,7 @@ extends CharacterBody2D
 var v = 0
 var m = 0
 var mov = false
+var deltar = 0
 var furtogether = false
 var together = false
 var inside = false
@@ -13,6 +14,7 @@ func _ready() -> void:
 	$".".position.x = completion.boxx
 
 func _physics_process(delta: float) -> void:
+	deltar = delta
 	print(completion.boxx)
 	$"Unsee".self_modulate.a -= 0.03
 	var motion = Vector2.ZERO
