@@ -16,5 +16,6 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	unsee = true
 	await get_tree().create_timer(2.0).timeout
+	completion.boxx = 0
 	get_tree().change_scene_to_file('res://other scenes/levelchoose.tscn')
 	completion.boxx = 0

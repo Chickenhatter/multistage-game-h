@@ -6,6 +6,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_3mv3f"]
 
 [node name="Node2D" type="Node2D" unique_id=217146861]
+metadata/_edit_horizontal_guides_ = [297.0]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1056691639]
 script = ExtResource("1_v5v0a")
@@ -23,7 +24,7 @@ offset_bottom = 33.0
 
 [node name="Blanker" type="Sprite2D" parent="Node2D" unique_id=1598468500]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(12, 2.499998)
+position = Vector2(12, 11.999999)
 scale = Vector2(3.36, 2.21)
 texture = ExtResource("2_xwybn")
 

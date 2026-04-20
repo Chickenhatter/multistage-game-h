@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cakd13bq76xxt" path="res://images/Character/pixil-frame-0 (13).png" id="12_vjef4"]
 [ext_resource type="Texture2D" uid="uid://tfykl73beope" path="res://images/Character/pixil-frame-0 (14).png" id="13_h3vvp"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ah3ca"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj0se"]
 texture = ExtResource("1_k4voq")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -72,14 +72,14 @@ texture = ExtResource("1_k4voq")
 
 [sub_resource type="TileSet" id="TileSet_e2cj4"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ah3ca")
+sources/0 = SubResource("TileSetAtlasSource_vj0se")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jq8xc"]
 size = Vector2(1561.5, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1wd8"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jq8xc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6jd0m"]
 texture = ExtResource("1_k4voq")
 0:0/0 = 0
 1:0/0 = 0
@@ -113,7 +113,7 @@ texture = ExtResource("1_k4voq")
 5:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_a1wd8"]
-sources/0 = SubResource("TileSetAtlasSource_jq8xc")
+sources/0 = SubResource("TileSetAtlasSource_6jd0m")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1bno"]
 size = Vector2(17, 16)
@@ -226,7 +226,7 @@ position = Vector2(372.25, 684)
 shape = SubResource("RectangleShape2D_jq8xc")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="Node2D/Map" unique_id=651363182]
-tile_map_data = PackedByteArray("AAAxAAIAAAAFAAEAAAAyAAMAAAADAAEAAAAyAAIAAAACAAIAAAAxAAMAAAAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAxAAIAAAAFAAEAAAAyAAMAAAADAAEAAAAyAAIAAAACAAIAAAAxAAMAAAAAAAIAAAAzAAUAAAAAAAEAAAA=")
 tile_set = SubResource("TileSet_a1wd8")
 
 [node name="Node2D2" type="Node2D" parent="Node2D" unique_id=333691026]
@@ -260,13 +260,8 @@ animation = &"left"
 autoplay = "left"
 offset = Vector2(43, 40)
 
-[node name="Icon" type="Sprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=1454018888]
-visible = false
-position = Vector2(0, -9.536743e-07)
-scale = Vector2(0.140625, 0.12500001)
-texture = ExtResource("2_ah3ca")
-
 [node name="Unsee" type="AnimatedSprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=1074815101]
+self_modulate = Color(1, 1, 1, 0)
 position = Vector2(22, -18)
 scale = Vector2(12.365002, 10.92)
 sprite_frames = SubResource("SpriteFrames_a1wd8")
