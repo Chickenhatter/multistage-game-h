@@ -216,22 +216,20 @@ scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
 
 [node name="five" type="Node2D" parent="Node2D/Areas" unique_id=1063968136]
-position = Vector2(64, 0)
 
 [node name="five" type="Area2D" parent="Node2D/Areas/five" unique_id=1364281338]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/five/five" unique_id=560161078]
-position = Vector2(328, 0)
+position = Vector2(392, 0)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
 
 [node name="six" type="Node2D" parent="Node2D/Areas" unique_id=412860433]
-position = Vector2(128, 0)
 
 [node name="six" type="Area2D" parent="Node2D/Areas/six" unique_id=1047861447]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/six/six" unique_id=505623828]
-position = Vector2(328, 0)
+position = Vector2(456, 0)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
 
@@ -268,3 +266,7 @@ texture = ExtResource("5_bwe3t")
 [connection signal="body_exited" from="Node2D/Areas/three/three" to="Node2D/Areas" method="_on_three_body_exited"]
 [connection signal="body_entered" from="Node2D/Areas/four/four" to="Node2D/Areas" method="_on_four_body_entered"]
 [connection signal="body_exited" from="Node2D/Areas/four/four" to="Node2D/Areas" method="_on_four_body_exited"]
+[connection signal="body_entered" from="Node2D/Areas/five/five" to="Node2D/Areas" method="_on_five_body_entered"]
+[connection signal="body_exited" from="Node2D/Areas/five/five" to="Node2D/Areas" method="_on_five_body_exited"]
+[connection signal="body_entered" from="Node2D/Areas/six/six" to="Node2D/Areas" method="_on_six_body_entered"]
+[connection signal="body_exited" from="Node2D/Areas/six/six" to="Node2D/Areas" method="_on_six_body_exited"]

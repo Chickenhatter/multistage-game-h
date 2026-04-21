@@ -30,7 +30,7 @@ func _on_finish_body_entered(body: Node2D) -> void:
 		await get_tree().create_timer(2.0).timeout
 		if completion.level <= 2:
 			completion.level = 3
-			completion.cap = 330
+			completion.cap = 328
 		get_tree().change_scene_to_file('res://other scenes/levelchoose.tscn')
 
 

@@ -60,3 +60,29 @@ func _on_four_body_exited(body: Node2D) -> void:
 		if completion.warn == 0:
 			completion.boxx = -100
 			completion.boxnum = 0
+
+
+func _on_five_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		completion.boxx = 392
+		completion.boxnum = 5
+
+
+func _on_five_body_exited(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0
+
+
+func _on_six_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		completion.boxx = 456
+		completion.boxnum = 6
+
+
+func _on_six_body_exited(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0
