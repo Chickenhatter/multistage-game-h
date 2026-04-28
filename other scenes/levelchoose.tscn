@@ -137,13 +137,13 @@ size = Vector2(20, 398.08334)
 script = ExtResource("1_abedc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Character/CharacterBody2D" unique_id=788460445]
-scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_jwws0")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Character/CharacterBody2D" unique_id=1839436370]
 zoom = Vector2(4, 4)
 
 [node name="Unsee" type="AnimatedSprite2D" parent="Node2D/Character/CharacterBody2D" unique_id=1721461460]
+visible = false
 z_index = 100
 position = Vector2(0.5, -1)
 scale = Vector2(6.55, 6.28)

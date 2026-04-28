@@ -1,0 +1,280 @@
+[gd_scene format=3 uid="uid://ce6mhebndsr0v"]
+
+[ext_resource type="Script" uid="uid://bdxmr6g7odhpc" path="res://code/map1.gd" id="1_ylwrg"]
+[ext_resource type="Texture2D" uid="uid://0dif4phctgek" path="res://images/Tileset/Tiles.png" id="2_ucm8k"]
+[ext_resource type="Script" uid="uid://xm05l5kuno11" path="res://code/player_movements.gd" id="3_3w8u8"]
+[ext_resource type="Texture2D" uid="uid://po7xvpl5oeeh" path="res://icon.svg" id="4_crwmq"]
+[ext_resource type="Texture2D" uid="uid://c2xnmlvstsxw8" path="res://images/Character/pixil-frame-0 (16).png" id="5_tlcmo"]
+[ext_resource type="Texture2D" uid="uid://cbvfnjt1p4ojg" path="res://images/Character/pixil-frame-0 (17).png" id="6_2tjkx"]
+[ext_resource type="Texture2D" uid="uid://cau88axhoapal" path="res://images/Character/pixil-frame-0 (12).png" id="7_2t7kj"]
+[ext_resource type="Texture2D" uid="uid://y3k5ns5lg5qr" path="res://images/Character/pixil-frame-0 (15).png" id="8_mtp1b"]
+[ext_resource type="Texture2D" uid="uid://iljfjsyqsfp" path="res://images/Character/pixil-frame-0 (9).png" id="9_kg3xo"]
+[ext_resource type="Texture2D" uid="uid://dptvfo5imu1tt" path="res://images/Character/pixil-frame-0 (10).png" id="10_7nmb6"]
+[ext_resource type="Texture2D" uid="uid://cakd13bq76xxt" path="res://images/Character/pixil-frame-0 (13).png" id="11_8om4p"]
+[ext_resource type="Texture2D" uid="uid://tfykl73beope" path="res://images/Character/pixil-frame-0 (14).png" id="12_r4nvp"]
+[ext_resource type="Texture2D" uid="uid://c832vcxltrsox" path="res://images/Character/black.png" id="13_w8h7c"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mrme4"]
+texture = ExtResource("2_ucm8k")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jjs1x"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_mrme4")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hw0re"]
+size = Vector2(1561.5, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hx6h"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_818a7"]
+texture = ExtResource("2_ucm8k")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_si016"]
+sources/0 = SubResource("TileSetAtlasSource_818a7")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0br3"]
+size = Vector2(17, 16)
+
+[sub_resource type="Curve2D" id="Curve2D_8n72l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7i3i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y860k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_crwmq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_tlcmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2tjkx")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2t7kj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mtp1b")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_kg3xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7nmb6")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_8om4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_r4nvp")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_piptg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_w8h7c")
+}],
+"loop": true,
+"name": &"Unsee",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_ylwrg"]
+
+[node name="Node2D" type="Node2D" unique_id=913446288]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1363167415]
+
+[node name="Map" type="Node2D" parent="Node2D" unique_id=576971660]
+script = ExtResource("1_ylwrg")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Node2D/Map" unique_id=1697705013]
+tile_set = SubResource("TileSet_jjs1x")
+
+[node name="Death Plane" type="Area2D" parent="Node2D/Map" unique_id=1790180360]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Map/Death Plane" unique_id=655272172]
+position = Vector2(338.5, 122.5)
+shape = SubResource("RectangleShape2D_hw0re")
+
+[node name="Finish" type="Area2D" parent="Node2D/Map" unique_id=497443831]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Map/Finish" unique_id=196510194]
+position = Vector2(800, 48)
+shape = SubResource("RectangleShape2D_2hx6h")
+
+[node name="trudeth" type="Area2D" parent="Node2D/Map" unique_id=2020578644]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Map/trudeth" unique_id=765640573]
+position = Vector2(372.25, 684)
+shape = SubResource("RectangleShape2D_hw0re")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Node2D/Map" unique_id=367409581]
+tile_set = SubResource("TileSet_si016")
+
+[node name="Node2D2" type="Node2D" parent="Node2D" unique_id=981489743]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D2" unique_id=486794890]
+position = Vector2(10, 38)
+script = ExtResource("3_3w8u8")
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=655266460]
+zoom = Vector2(5, 5)
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=850629829]
+shape = SubResource("RectangleShape2D_h0br3")
+
+[node name="Path2D" type="Path2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=111491614]
+curve = SubResource("Curve2D_8n72l")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Node2D2/CharacterBody2D/Path2D" unique_id=407387509]
+
+[node name="Leave" type="Area2D" parent="Node2D/Node2D2/CharacterBody2D/Path2D/PathFollow2D" unique_id=1177550076]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D2/CharacterBody2D/Path2D/PathFollow2D/Leave" unique_id=1381904903]
+shape = SubResource("RectangleShape2D_p7i3i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=1027393705]
+position = Vector2(-1, 2)
+scale = Vector2(1.11, 1)
+sprite_frames = SubResource("SpriteFrames_y860k")
+animation = &"left"
+autoplay = "left"
+offset = Vector2(43, 40)
+
+[node name="Unsee" type="AnimatedSprite2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=1586400096]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(22, -18)
+scale = Vector2(12.365002, 10.92)
+sprite_frames = SubResource("SpriteFrames_piptg")
+animation = &"Unsee"
+autoplay = "Unsee"
+
+[node name="Node2D" type="Node2D" parent="Node2D" unique_id=1115395142]
+
+[node name="Node2D" type="Node2D" parent="Node2D/Node2D" unique_id=1993313546]
+
+[node name="Path2D" type="Path2D" parent="Node2D/Node2D/Node2D" unique_id=2137359952]
+curve = SubResource("Curve2D_ylwrg")
+
+[connection signal="body_entered" from="Node2D/Map/Death Plane" to="Node2D/Map" method="_on_death_plane_body_entered"]
+[connection signal="body_entered" from="Node2D/Map/Finish" to="Node2D/Map" method="_on_finish_body_entered"]
+[connection signal="body_entered" from="Node2D/Map/trudeth" to="Node2D/Map" method="_on_trudeth_body_entered"]

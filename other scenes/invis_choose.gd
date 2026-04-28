@@ -42,13 +42,13 @@ func _physics_process(delta: float) -> void:
 	elif together == false:
 		inside = false
 		if (v > m):
-			if ((v+3)>m):
-				if ((v-3)>m):
+			if ((v+20)>m):
+				if ((v-20)>m):
 					$"../AnimatedSprite2D".position.x -= 3
 					mov = true
 		if v < m:
-			if ((v+3)<m):
-				if ((v-3)<m):
+			if ((v+20)<m):
+				if ((v-20)<m):
 					$"../AnimatedSprite2D".position.x += 3
 					mov = true
 	if next == true:
