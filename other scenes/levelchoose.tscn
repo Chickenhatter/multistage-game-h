@@ -235,6 +235,38 @@ position = Vector2(456, 0)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
 
+[node name="seven" type="Node2D" parent="Node2D/Areas" unique_id=1113965052]
+position = Vector2(463, -2)
+
+[node name="seven" type="Area2D" parent="Node2D/Areas/seven" unique_id=706830562]
+position = Vector2(-463, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/seven/seven" unique_id=2082448498]
+position = Vector2(552, -229.00002)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_gavp6")
+
+[node name="eight" type="Node2D" parent="Node2D/Areas" unique_id=821070950]
+position = Vector2(463, -2)
+
+[node name="eight" type="Area2D" parent="Node2D/Areas/eight" unique_id=1264830385]
+position = Vector2(-463, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/eight/eight" unique_id=1040333522]
+position = Vector2(616, -150)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_gavp6")
+
+[node name="nine" type="Node2D" parent="Node2D/Areas" unique_id=1463047931]
+position = Vector2(463, -2)
+
+[node name="nine" type="Area2D" parent="Node2D/Areas/nine" unique_id=1606682942]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/nine/nine" unique_id=1752568851]
+position = Vector2(89, -228.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_gavp6")
+
 [node name="next" type="Node2D" parent="Node2D" unique_id=1891202084]
 script = ExtResource("6_ewnan")
 
@@ -274,3 +306,9 @@ texture = ExtResource("5_bwe3t")
 [connection signal="body_exited" from="Node2D/Areas/five/five" to="Node2D/Areas" method="_on_five_body_exited"]
 [connection signal="body_entered" from="Node2D/Areas/six/six" to="Node2D/Areas" method="_on_six_body_entered"]
 [connection signal="body_exited" from="Node2D/Areas/six/six" to="Node2D/Areas" method="_on_six_body_exited"]
+[connection signal="body_entered" from="Node2D/Areas/seven/seven" to="Node2D/Areas" method="_on_seven_body_entered"]
+[connection signal="body_exited" from="Node2D/Areas/seven/seven" to="Node2D/Areas" method="_on_seven_body_exited"]
+[connection signal="body_entered" from="Node2D/Areas/eight/eight" to="Node2D/Areas" method="_on_eight_body_entered"]
+[connection signal="body_exited" from="Node2D/Areas/eight/eight" to="Node2D/Areas" method="_on_eight_body_exited"]
+[connection signal="body_entered" from="Node2D/Areas/nine/nine" to="Node2D/Areas" method="_on_nine_body_entered"]
+[connection signal="body_exited" from="Node2D/Areas/nine/nine" to="Node2D/Areas" method="_on_nine_body_exited"]

@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	print(completion.boxx)
 
 
 func _on_one_body_entered(body: Node2D) -> void:
@@ -86,3 +86,36 @@ func _on_six_body_exited(body: Node2D) -> void:
 		if completion.warn == 0:
 			completion.boxx = -100
 			completion.boxnum = 0
+
+func _on_seven_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		completion.boxx =  $seven/seven/CollisionShape2D.global_position.x
+		completion.boxnum = 7
+
+
+func _on_seven_body_exited(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0
+
+
+func _on_eight_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		completion.boxx =  $eight/eight/CollisionShape2D.global_position.x
+		completion.boxnum = 8
+
+
+func _on_eight_body_exited(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0
+
+
+func _on_nine_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_nine_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

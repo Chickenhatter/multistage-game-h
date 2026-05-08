@@ -26,9 +26,9 @@ func _on_finish_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		unsee = true
 		await get_tree().create_timer(2.0).timeout
-		if completion.level == 0:
+		if completion.level <= 0:
 			completion.level = 1
-			completion.cap = 168
+			completion.cap = 89
 		get_tree().change_scene_to_file('res://other scenes/levelchoose.tscn')
 
 

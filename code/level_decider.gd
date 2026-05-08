@@ -22,5 +22,14 @@ func _process(delta: float) -> void:
 		elif completion.boxnum == 4:
 			completion.nextcall = 0
 			get_tree().change_scene_to_file('res://level/level_four.tscn')
+		elif completion.boxnum == 5:
+			completion.nextcall = 0
+			get_tree().change_scene_to_file('res://level/level_five.tscn')
+		elif completion.boxnum == 6:
+			completion.nextcall = 0
+			get_tree().change_scene_to_file('res://level/level_six.tscn')
+		elif completion.boxnum == 7:
+			completion.nextcall = 0
+			get_tree().change_scene_to_file('res://level/level_seven.tscn')
 		else:
 			print('something broke :cryin:')
