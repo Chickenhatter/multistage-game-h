@@ -11,7 +11,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	deltar = delta
-	print(completion.boxx)
 	if unsee == false:
 		if $"../Node2D2/CharacterBody2D/Unsee".self_modulate.a > 0:
 			$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a -= 0.06

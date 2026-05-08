@@ -9,7 +9,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(completion.boxx)
 	if unsee == false:
 		if $"../Node2D2/CharacterBody2D/Unsee".self_modulate.a > 0:
 			$"../Node2D2/CharacterBody2D/Unsee".self_modulate.a -= 0.06
@@ -28,7 +27,7 @@ func _on_finish_body_entered(body: Node2D) -> void:
 		await get_tree().create_timer(2.0).timeout
 		if completion.level <= 0:
 			completion.level = 1
-			completion.cap = 89
+			completion.cap = 168
 		get_tree().change_scene_to_file('res://other scenes/levelchoose.tscn')
 
 

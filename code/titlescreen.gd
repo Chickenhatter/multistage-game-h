@@ -10,7 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if unsee == true:
 		$"Blanker".self_modulate.a += 0.03
-	print(completion.boxx)
 
 
 func _on_button_pressed() -> void:

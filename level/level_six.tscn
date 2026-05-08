@@ -248,9 +248,10 @@ position = Vector2(338.5, 122.5)
 shape = SubResource("RectangleShape2D_hw0re")
 
 [node name="Finish" type="Area2D" parent="Node2D/Map" unique_id=497443831]
+position = Vector2(-14, 124)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Map/Finish" unique_id=196510194]
-position = Vector2(512, -272)
+position = Vector2(526, -396)
 shape = SubResource("RectangleShape2D_2hx6h")
 
 [node name="trudeth" type="Area2D" parent="Node2D/Map" unique_id=2020578644]
