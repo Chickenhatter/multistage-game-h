@@ -15,7 +15,6 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	deltar = delta
-	print(completion.boxx)
 	$"Unsee".self_modulate.a -= 0.03
 	var motion = Vector2.ZERO
 	v = $"../AnimatedSprite2D".position.x
@@ -42,13 +41,13 @@ func _physics_process(delta: float) -> void:
 	elif together == false:
 		inside = false
 		if (v > m):
-			if ((v+20)>m):
-				if ((v-20)>m):
+			if ((v+4)>m):
+				if ((v-4)>m):
 					$"../AnimatedSprite2D".position.x -= 3
 					mov = true
 		if v < m:
-			if ((v+20)<m):
-				if ((v-20)<m):
+			if ((v+4)<m):
+				if ((v-4)<m):
 					$"../AnimatedSprite2D".position.x += 3
 					mov = true
 	if next == true:

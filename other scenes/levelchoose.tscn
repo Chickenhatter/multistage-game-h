@@ -85,8 +85,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kfkw3"]
+size = Vector2(169.99997, 169.99997)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bwe3t"]
+size = Vector2(11.333334, 11.333334)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gavp6"]
 texture = ExtResource("2_jwws0")
@@ -125,7 +127,7 @@ texture = ExtResource("2_jwws0")
 sources/0 = SubResource("TileSetAtlasSource_gavp6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gavp6"]
-size = Vector2(20, 398.08334)
+size = Vector2(13.333334, 398.08334)
 
 [node name="Node2D" type="Node2D" unique_id=532354569]
 
@@ -143,7 +145,6 @@ shape = SubResource("RectangleShape2D_jwws0")
 zoom = Vector2(4, 4)
 
 [node name="Unsee" type="AnimatedSprite2D" parent="Node2D/Character/CharacterBody2D" unique_id=1721461460]
-visible = false
 z_index = 100
 position = Vector2(0.5, -1)
 scale = Vector2(6.55, 6.28)
@@ -160,6 +161,7 @@ offset = Vector2(43, 40)
 [node name="hwd" type="Area2D" parent="Node2D/Character" unique_id=449119892]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Character/hwd" unique_id=1799579125]
+position = Vector2(-9.536743e-07, -9.536743e-07)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_kfkw3")
 
@@ -184,7 +186,7 @@ script = ExtResource("4_kfkw3")
 [node name="one" type="Area2D" parent="Node2D/Areas/one" unique_id=534035707]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areas/one/one" unique_id=1050597703]
-position = Vector2(88, -228.75)
+position = Vector2(89, -228.75)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_gavp6")
 
@@ -239,6 +241,7 @@ script = ExtResource("6_ewnan")
 [node name="Node2D2" type="Node2D" parent="." unique_id=212000558]
 
 [node name="SinGraph" type="Sprite2D" parent="Node2D2" unique_id=435510303]
+visible = false
 self_modulate = Color(1, 1, 1, 0.4745098)
 light_mask = 4
 visibility_layer = 512
@@ -247,6 +250,7 @@ scale = Vector2(1.0091105, 1.0098039)
 texture = ExtResource("5_bwe3t")
 
 [node name="SinGraph2" type="Sprite2D" parent="Node2D2" unique_id=32223214]
+visible = false
 self_modulate = Color(1, 1, 1, 0.4745098)
 light_mask = 4
 visibility_layer = 512
