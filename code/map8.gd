@@ -24,9 +24,10 @@ func _on_death_plane_body_entered(body: Node2D) -> void:
 func _on_finish_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		unsee = true
-		completion.level = 6
-		completion.cap = 552
 		await get_tree().create_timer(2.0).timeout
+		if completion.level <= 7:
+			completion.level = 8
+			completion.cap = 696
 		get_tree().change_scene_to_file('res://other scenes/levelchoose.tscn')
 
 

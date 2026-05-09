@@ -267,7 +267,7 @@ tile_set = SubResource("TileSet_si016")
 [node name="Node2D2" type="Node2D" parent="Node2D" unique_id=981489743]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D2" unique_id=486794890]
-position = Vector2(2, -28)
+position = Vector2(-89, -66)
 script = ExtResource("3_2tjkx")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Node2D2/CharacterBody2D" unique_id=655266460]

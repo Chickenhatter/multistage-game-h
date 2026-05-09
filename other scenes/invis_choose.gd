@@ -38,18 +38,19 @@ func _physics_process(delta: float) -> void:
 	if (completion.boxx != -100) and (furtogether == true):
 		$"../AnimatedSprite2D".position.x = completion.boxx
 		inside = true
-	elif together == false:
+	else:# together == false:
 		inside = false
 		if (v > m):
-			if ((v+4)>m):
-				if ((v-4)>m):
+			if ((v+1)>m):
+				if ((v-1)>m):
 					$"../AnimatedSprite2D".position.x -= 3
 					mov = true
 		if v < m:
-			if ((v+4)<m):
+			if ((v+1)<m):
 				if ((v-4)<m):
 					$"../AnimatedSprite2D".position.x += 3
 					mov = true
+		
 	if next == true:
 		$"../AnimatedSprite2D".play('up')
 		$"Unsee".self_modulate.a += 0.11

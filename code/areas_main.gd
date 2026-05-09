@@ -114,8 +114,26 @@ func _on_eight_body_exited(body: Node2D) -> void:
 
 
 func _on_nine_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body is CharacterBody2D:
+		completion.boxx =  $ninet/nine/CollisionShape2D.global_position.x
+		completion.boxnum = 8
 
 
 func _on_nine_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body is CharacterBody2D:
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0
+
+
+func _on_ten_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		completion.boxx =  $ten/ten/CollisionShape2D.global_position.x
+		completion.boxnum = 8
+
+
+func _on_ten_body_exited(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		if completion.warn == 0:
+			completion.boxx = -100
+			completion.boxnum = 0
