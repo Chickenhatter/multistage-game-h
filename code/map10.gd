@@ -28,7 +28,7 @@ func _on_finish_body_entered(body: Node2D) -> void:
 		if completion.level <= 9:
 			completion.level = 10
 			completion.cap = 776
-		get_tree().change_scene_to_file('res://other scenes/start.tscn')
+		get_tree().change_scene_to_file('res://other scenes/end.tscn')
 
 
 func _on_trudeth_body_entered(body: Node2D) -> void:
