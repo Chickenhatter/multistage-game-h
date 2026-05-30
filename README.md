@@ -3,4 +3,6 @@
 <p>This was made with no AI</p>
 <h3>Movement</h3>
 <p>Use W for jump and AD for left/right</p>
+<p>The point of this game is as a multi level platformer, there is 10 levels in total</p>
+<p>The way to win the game is to go through all 10 levels and you can beat the level by going through the box seen in the bottom image</p>
 
